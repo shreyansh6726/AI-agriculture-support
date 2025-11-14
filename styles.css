@@ -949,6 +949,31 @@ ul {
   align-items: flex-start;
 }
 
+/* Glow effect for How It Works steps */
+.workflow-text li h3,
+.workflow-text li p {
+  transition: text-shadow 0.28s ease, transform 0.28s ease;
+}
+
+.workflow-text li:hover h3,
+.workflow-text li:focus-within h3 {
+  transform: translateY(-4px);
+  /* glow only, do not change text color */
+  text-shadow: 0 8px 22px rgba(101,140,88,0.22), 0 3px 8px rgba(171,231,178,0.12);
+}
+
+.workflow-text li:hover p,
+.workflow-text li:focus-within p {
+  transform: translateY(-2px);
+  text-shadow: 0 6px 16px rgba(147,191,199,0.10);
+}
+
+.workflow-text li:hover .step-number,
+.workflow-text li:focus-within .step-number {
+  box-shadow: 0 8px 20px rgba(49,105,78,0.16), 0 2px 6px rgba(171,231,178,0.12);
+  transform: translateY(-3px) scale(1.02);
+}
+
 .step-number {
   width: 2.5rem;
   height: 2.5rem;
@@ -974,15 +999,68 @@ ul {
   border: 1px solid rgba(171, 231, 178, 0.4);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  transition: transform 0.4s ease, border-color 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.38s cubic-bezier(.2,.9,.2,1), box-shadow 0.38s ease, border-color 0.3s ease, background-position 0.6s ease;
   opacity: 0;
   transform: translateY(20px);
+  background-size: 220% 220%;
+  position: relative;
+  overflow: hidden;
+}
+
+.list-card::before {
+  content: "";
+  position: absolute;
+  inset: -40% -30% auto -30%;
+  height: 140px;
+  background: radial-gradient(circle at left top, rgba(171,231,178,0.35), rgba(147,191,199,0.06));
+  transform: rotate(-8deg) translateY(0);
+  transition: transform 0.6s cubic-bezier(.2,.9,.2,1), opacity 0.45s ease;
+  pointer-events: none;
 }
 
 .list-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(147, 191, 199, 0.6);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(147, 191, 199, 0.65);
+  box-shadow: 0 18px 42px rgba(6,34,23,0.12);
+  background-position: right center;
 }
+
+.list-card:hover::before {
+  transform: rotate(-6deg) translateY(-6px) scale(1.05);
+  opacity: 1;
+}
+
+/* Animate child content on hover */
+.list-card h4,
+.list-card p,
+.list-card ul {
+  position: relative;
+  transition: transform 0.36s cubic-bezier(.2,.9,.2,1), opacity 0.36s ease;
+}
+
+.list-card h4 {
+  transform: translateY(0);
+}
+
+.list-card ul li {
+  transform: translateX(-8px);
+  opacity: 0.85;
+  transition: transform 0.34s ease, opacity 0.34s ease;
+}
+
+.list-card:hover h4 {
+  transform: translateY(-6px);
+}
+
+.list-card:hover ul li {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Stagger list item animation */
+.list-card:hover ul li:nth-child(1) { transition-delay: 0s; }
+.list-card:hover ul li:nth-child(2) { transition-delay: 0.04s; }
+.list-card:hover ul li:nth-child(3) { transition-delay: 0.08s; }
 
 .voice-ai {
   padding: 5rem clamp(1.5rem, 5vw, 4rem);
