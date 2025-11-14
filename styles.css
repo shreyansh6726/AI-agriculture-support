@@ -323,12 +323,17 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: var(--olive);
+  /* make navbar translucent: transparent background with backdrop blur */
+  background: transparent;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   color: var(--forest);
   padding: 0.75rem 1.5rem;
   border-radius: 18px;
-  border: 1px solid rgba(10, 63, 44, 0.18);
-  box-shadow: 0 24px 45px rgba(6, 34, 23, 0.2);
+  /* keep a subtle border to separate from content */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  /* soften the shadow so the navbar feels lighter */
+  box-shadow: 0 12px 28px rgba(6, 34, 23, 0.08);
   position: fixed;
   top: 1rem;
   left: clamp(1.5rem, 5vw, 4rem);
