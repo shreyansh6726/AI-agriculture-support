@@ -10,7 +10,7 @@ This repository contains a simple static website (HTML, CSS, and vanilla JavaScr
 
 - Project: `AI-agriculture-support`
 - Type: Static website (no server required)
-- Tech: HTML, CSS, vanilla JavaScript
+- Tech: HTML, CSS, JavaScript
 - Purpose: Prototype UI for farmer-facing AI product — shows features, how-it-works steps, and small interactive elements (login simulation, dropdown, modal, animations).
 
 ---
