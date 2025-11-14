@@ -205,9 +205,9 @@ ul {
 }
 
 .navbar .btn-outline {
-  color: var(--forest);
-  border-color: rgba(49, 105, 78, 0.35);
-  background: rgba(203, 243, 187, 0.4);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .navbar .btn-outline:hover {
@@ -327,7 +327,7 @@ ul {
   background: rgba(255, 255, 255, 0.045); /* very slight white tint */
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  color: var(--forest);
+  color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 18px;
   /* keep a subtle border to separate from content */
@@ -364,7 +364,7 @@ ul {
 }
 
 .nav-links li a {
-  color: rgba(49, 105, 78, 0.85);
+  color: #fff;
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -372,7 +372,7 @@ ul {
 
 .nav-links li a.active,
 .nav-links li a:focus-visible {
-  color: var(--forest);
+  color: #fff;
 }
 
 .nav-links li a::after {
@@ -391,7 +391,7 @@ ul {
 }
 
 .nav-links li a:hover {
-  color: var(--forest);
+  color: #fff;
 }
 
 .nav-links li a:hover::after {
