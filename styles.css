@@ -348,6 +348,7 @@ ul {
   font-size: 1.2rem;
   font-weight: 700;
   color: inherit;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 
 .logo-icon {
@@ -368,6 +369,7 @@ ul {
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 
 .nav-links li a.active,
@@ -391,7 +393,7 @@ ul {
 }
 
 .nav-links li a:hover {
-  color: #fff;
+  color: #336b50;
 }
 
 .nav-links li a:hover::after {
@@ -417,6 +419,7 @@ ul {
   background: rgba(203, 243, 187, 0.45);
   color: var(--forest);
   border: 2px solid rgba(49, 105, 78, 0.28);
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 .user-btn .caret {
   font-size: 0.9rem;
