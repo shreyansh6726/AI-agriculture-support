@@ -325,8 +325,8 @@ ul {
   gap: 1rem;
   /* make navbar translucent: faint white tint + backdrop blur to improve contrast */
   background: rgba(255, 255, 255, 0.045); /* very slight white tint */
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(16px);
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 18px;
@@ -348,7 +348,6 @@ ul {
   font-size: 1.2rem;
   font-weight: 700;
   color: inherit;
-  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 
 .logo-icon {
@@ -369,7 +368,6 @@ ul {
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
-  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 
 .nav-links li a.active,
@@ -399,19 +397,14 @@ ul {
 .nav-links li a:hover::after {
   width: 100%;
 }
-
-/* Disable underline animation for button links */
-.nav-links li .btn::after {
-  display: none;
-}
-
-/* User dropdown in navbar */
 .user-menu {
   position: relative;
 }
+
 .user-wrap {
   position: relative;
 }
+
 .user-btn {
   display: inline-flex;
   align-items: center;
@@ -419,12 +412,13 @@ ul {
   background: rgba(203, 243, 187, 0.45);
   color: var(--forest);
   border: 2px solid rgba(49, 105, 78, 0.28);
-  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
+
 .user-btn .caret {
   font-size: 0.9rem;
   opacity: 0.9;
 }
+
 .user-dropdown {
   position: absolute;
   right: 0;
@@ -438,6 +432,7 @@ ul {
   padding: 0.25rem 0;
   z-index: 1000;
 }
+
 .user-dropdown li {
   padding: 0;
 }
@@ -458,7 +453,6 @@ ul {
   display: none;
 }
 
-/* Logout confirmation modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1081,7 +1075,6 @@ ul {
   opacity: 1;
 }
 
-/* Stagger list item animation */
 .list-card:hover ul li:nth-child(1) { transition-delay: 0s; }
 .list-card:hover ul li:nth-child(2) { transition-delay: 0.04s; }
 .list-card:hover ul li:nth-child(3) { transition-delay: 0.08s; }
