@@ -323,8 +323,8 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  /* make navbar translucent: transparent background with backdrop blur */
-  background: transparent;
+  /* make navbar translucent: faint white tint + backdrop blur to improve contrast */
+  background: rgba(255, 255, 255, 0.045); /* very slight white tint */
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   color: var(--forest);
